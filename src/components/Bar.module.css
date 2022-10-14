@@ -1,0 +1,43 @@
+.bar{
+    background-color: var(--bar-background);
+    color: #fff;
+    padding: 10px;
+    height : 100vh;
+    width: 30%;
+    min-width: 16rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.navs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.inactiveNav {
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--common-radious);
+    width : 90%;
+    color : var(--base-tertiary);
+    font-weight: bold;
+
+}
+
+.activeNav {
+    text-decoration: none;
+    width : 90%;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: var(--base-secondary);
+    color: var(--base-primary);
+    padding: 0.6rem 1rem;
+    border-radius: var(--common-radious);
+}

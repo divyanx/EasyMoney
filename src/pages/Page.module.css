@@ -1,0 +1,6 @@
+.main_page{
+    width : 80%;
+    background-color: var(--base-primary);
+    height : 100vh;
+    flex-grow: 1;
+}

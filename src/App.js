@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import useLocalStorage from "use-local-storage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import './App.css';
 
 function App() {
+  const defaultDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+  ).matches;
+
+  const [theme, setTheme] = useLocalStorage(
+      "theme",
+      defaultDark ? "dark" : "light"
+  );
+  const switchTheme = (theme) => {
+      console.log(theme);
+      setTheme(theme);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" data-theme={theme}>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home switchTheme={switchTheme}/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

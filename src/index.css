@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 62.5%;
+  /* 1 rem = 10px */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* base */
+  --base-primary: #ffffff;
+  --base-secondary: #404040;
+  --base-tertiary: #919191;
+  /* accents */
+  --accent-primary : #27A371;
+  --accent-secondary : #74E2A3;
+  --accent-tertiary :  rgb(116, 226, 163, 0.6);
+  --accent-quaternary : rgb(116, 226, 163, 0.3);
+
+/*  others*/
+  --bar-background: #000;
+  --common-radious: 0.4rem;
+
+}
+
+[data-theme="dark"] {
+  /* base */
+  --base-primary: #1f232e;
+
+
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--base-primary);
+}
+body {
+  background-color: var(--base-primary);
+}
+
+html {
+  background-color: var(--base-primary);
 }
