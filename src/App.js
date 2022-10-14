@@ -1,5 +1,5 @@
 import useLocalStorage from "use-local-storage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {BrowserRouter, Routes, Route, Redirect, Navigate} from "react-router-dom";
 import Home from "./pages/Home";
 import './App.css';
 
@@ -17,13 +17,20 @@ function App() {
       setTheme(theme);
   };
 
+    //if path is / redirect to /dashboard
+
+
+
+
+
   return (
     <div className="App" data-theme={theme}>
-      <BrowserRouter>
+        <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home switchTheme={switchTheme}/>} />
+            <Route exact path="/" element={<Navigate to={"/dashboard"} />} />
+            <Route path="/*" element={<Home switchTheme={switchTheme} />} />
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
     </div>
   );
 }

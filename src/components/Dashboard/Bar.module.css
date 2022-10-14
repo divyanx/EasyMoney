@@ -1,0 +1,29 @@
+.bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: -3rem;
+    z-index: 101;
+    height: 100%;
+}
+
+.bar_item {
+    width : 4rem;
+    z-index : 102;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    margin-bottom: -0.5rem;
+}
+
+.bar_item:nth-child(3) {
+    margin-bottom: 0;
+}
+
+.label{
+    font-size : 1.5rem;
+    color: var(--label-primary);
+    font-weight: 300;
+    padding-top: 0.4rem;
+    margin-bottom: 2.8rem;
+}

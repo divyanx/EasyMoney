@@ -16,21 +16,25 @@ html {
   --base-primary: #ffffff;
   --base-secondary: #404040;
   --base-tertiary: #919191;
-  /* accents */
+  --base-quaternary: #F0F0F0;
   --accent-primary : #27A371;
-  --accent-secondary : #74E2A3;
-  --accent-tertiary :  rgb(116, 226, 163, 0.6);
-  --accent-quaternary : rgb(116, 226, 163, 0.3);
+  --accent-secondary : #74e2a3;
+  --accent-tertiary : #ABF0C4;
+  --accent-quaternary : #d4f7d8;
 
 /*  others*/
   --bar-background: #000;
   --common-radious: 0.4rem;
+  --border-colors : #ddddde;
 
+  --label-primary: #1f232e;
 }
 
 [data-theme="dark"] {
   /* base */
   --base-primary: #1f232e;
+
+  --label-primary: #ffffff;
 
 
 }
