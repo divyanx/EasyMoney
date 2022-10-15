@@ -1,0 +1,92 @@
+.modal{
+    position: fixed;
+    width: 40vw;
+    height: 40vh;
+    background-color: var(--base-primary);
+    z-index: 100001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.head{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--label-primary);
+    margin-bottom: 2rem;
+}
+.modalbck{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100000;
+    top: 0;
+    left: 0;
+}
+.header{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cancel {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mainpara p {
+    font-size: 1.5rem;
+    color: var(--label-primary);
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+input {
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--border-colors);
+    flex-grow : 1;
+    padding: 1rem;
+    background-color: transparent;
+    color: var(--label-primary);
+}
+
+.formLine {
+    display: flex;
+    flex-direction: row;
+    gap : 3rem;
+    margin: 1rem 0rem;
+
+}
+
+/*change border of input when selected*/
+input:focus {
+    outline: none;
+    border: 0.1rem solid var(--accent-primary);
+}
+
+/*change style of placeholder*/
+input::placeholder {
+    color: var(--base-tertiary);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.submit {
+    font-size: 1.8rem;
+    background-color: var(--accent-primary);
+    color: var(--base-primary);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    width : 100%;
+    margin-top: 10rem;
+}
+
+.submit:hover {
+    background-color: var(--accent-secondary);
+}
