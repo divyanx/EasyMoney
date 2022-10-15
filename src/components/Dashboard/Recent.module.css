@@ -1,0 +1,186 @@
+.recent {
+    width: 100%;
+    border : 1px solid var(--grid-color);
+    border-radius: 0.6rem;
+    margin-top: 3rem;
+
+}
+
+.topBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 4%;
+}
+
+.topBar h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--label-primary);
+}
+
+.date_pick{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid var(--border-colors);
+    border-radius: 0.6rem;
+    color: var(--label-primary);
+}
+.switchcont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-top : 1px solid var(--grid-color);
+    padding : 1rem 4%;
+    border-bottom: 1px solid var(--grid-color);
+}
+
+
+.switchcont button{
+    padding: 0.8rem 1rem;
+    border : 0.8px solid var(--border-colors);
+    color : var(--label-primary);
+}
+
+.button1{
+    background-color: transparent;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.button3{
+    background-color: transparent;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.button2{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.activebtn{
+    background-color:  var(--base-quaternary)
+}
+
+.transactionTable{
+    height: 30vh;
+    overflow-y: scroll;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid var(--grid-color);
+    border-top : none;
+    border-radius: 0.6rem;
+
+}
+
+tr {
+    border-bottom: 1px solid var(--grid-color);
+}
+
+td {
+    padding: 1.4rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--label-primary);
+}
+
+
+
+tr td:nth-child(1){
+    padding-left: 4%;
+    width: 50%;
+
+}
+
+.index td:nth-child(1){
+    padding-left: 3%;
+    width: 50%;
+}
+
+tr td:nth-child(2){
+    width: 15%;
+    color: var(--base-tertiary);
+}
+
+tr td:nth-child(3){
+    width: 15%;
+    color: var(--base-tertiary);
+}
+
+tr td:nth-child(4){
+    width: auto;
+    color: var(--base-tertiary);
+    padding-right: 4%;
+}
+
+.index td{
+    font-weight: 500;
+    color: var(--base-tertiary);
+}
+
+.credit {
+    color : var(--accent-primary)!important;
+
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+/*    minimise image to fit*/
+    object-fit: scale-down;
+    border: 1px solid var(--grid-color);
+    background-color: #eaeaea;
+}
+
+.merchcont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+
+}
+
+.card {
+    width : 3rem;
+    height: auto;
+    border-radius: 0.2rem;
+}
+
+.mode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.cardDet{
+    display :flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cardDet span:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--label-primary);
+}

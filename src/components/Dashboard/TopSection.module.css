@@ -51,7 +51,7 @@
 
 .countryList {
     background-color: var(--base-primary);
-    width: 15rem;
+    width: 20rem;
     height: auto;
     max-height: 100rem;
     z-index: 1003;
@@ -68,11 +68,20 @@
     flex-direction: row;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.2rem 0.4rem;
+    padding: 0.8rem 1.2rem;
     border : 0.8px solid var(--grid-color);
     color : var(--label-primary);
+
+}
+
+/*hover*/
+.countryItem:hover{
+    background-color: var(--base-quaternary);
+    cursor: pointer;
 }
 
 .countryName{
+    font-size: 1.4rem;
     display: inline-block;
+
 }

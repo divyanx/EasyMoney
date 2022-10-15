@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import currencyValues from "../data/currecyValues";
 import Chart from "../components/Dashboard/Chart";
 import LegendAndSwitch from "../components/Dashboard/LegendAndSwitch";
+import Recent from "../components/Dashboard/Recent";
 const DashBoard = () => {
 
     //run a sychronous function to get the data
@@ -34,6 +35,7 @@ const DashBoard = () => {
             <AmountBar amountInUsd={1000} currency={currency} />
             <LegendAndSwitch  setViewMode={setViewMode}/>
             <Chart  viewPeriod={viewperiod} currency={currency} symbol={symbol}  conversionRate={conversionRate} />
+            <Recent symbol={symbol} conversionRate={conversionRate}></Recent>
         </div>
     );
 }

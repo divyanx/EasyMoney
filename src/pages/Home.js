@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Bar from "../components/Bar";
+import SideBar from "../components/SideBar";
 import Page from "./Page";
 const Home = ({ switchTheme }) => {
     return (
         <div className={styles.home}>
-           <Bar switchTheme={switchTheme} />
+           <SideBar switchTheme={switchTheme} />
             <Page />
         </div>
 
