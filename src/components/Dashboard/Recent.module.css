@@ -201,7 +201,7 @@ tr td:nth-child(4){
 }
 @media (max-width: 1000px) {
     .transactionTable{
-        height: 85vh;
+        height: 25vh;
         overflow-y: scroll;
     }
 
@@ -226,6 +226,49 @@ tr td:nth-child(4){
         padding: 1.4rem 0;
         margin: 0;
     }
+    .transactionTable{
+        height: 20vh;
+        overflow-y: scroll;
+    }
+
+
+}
+
+@media (max-width: 420px) {
+
+    .transactionTable{
+        height: 19vh;
+        overflow-y: scroll;
+    }
+    .switchcont{
+        padding: 0.5rem;
+    }
+    td {
+        font-size: 1rem;
+        padding: 2rem 0;
+    }
+
+    .recent{
+        margin-top: 1rem;
+    }
+
+    .topBar{
+        padding: 0.4rem 2%;
+    }
+
+    .date_pick{
+        padding: 0.4rem 0.6rem;
+    }
+
+    .switchcont{
+        padding: 0.5rem 2%;
+    }
+
+    .switchcont button{
+        padding: 0.2rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
 
 
 }
