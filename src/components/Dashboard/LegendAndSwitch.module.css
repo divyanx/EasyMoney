@@ -1,0 +1,97 @@
+.legendCol1{
+    width:1rem;
+    height:1rem;
+    border-radius: 100%;
+    background-color: var(--accent-secondary);
+
+}
+
+.legendCol2{
+    width:1rem;
+    height:1rem;
+    border-radius: 100%;
+    background-color: var(--accent-tertiary);
+}
+
+
+.legendCol3{
+    width:1rem;
+    height:1rem;
+    border-radius: 100%;
+    background-color: var(--accent-quaternary);
+}
+
+.legendcont {
+
+    width: 50%;
+    min-width: 40rem;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.legendcont h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--label-primary);
+}
+
+.legend_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.legend_item span{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--label-primary);
+}
+
+.legend_switch{
+    margin-top:4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switchcont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.switchcont button{
+    padding: 1rem 1rem;
+    border : 0.8px solid var(--border-colors);
+    color : var(--label-primary);
+}
+
+.button1{
+    background-color: transparent;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.button3{
+    background-color: transparent;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.button2{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.activebtn{
+    background-color:  var(--base-quaternary)
+}

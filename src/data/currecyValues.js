@@ -13,7 +13,7 @@ const currencyValues = [
         country: "United Kingdom",
         short: "GBP",
         value: 0.77,
-        contry_short : "UK",
+        contry_short : "GB",
         symbol: "£"
     },
     {

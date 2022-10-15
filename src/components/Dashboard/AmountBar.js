@@ -14,7 +14,7 @@ const AmountBar = ({ amountInUsd, currency }) => {
     }, [currency, amountInUsd]);
     return (
         <div className={styles.amount_bar}>
-        <p>{symbol}{amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+        <p>{symbol} {amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
         <p>{currency}</p>
         </div>
     );

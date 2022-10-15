@@ -3,6 +3,7 @@ import AmountBar from "../components/Dashboard/AmountBar";
 import {useEffect, useState} from "react";
 import currencyValues from "../data/currecyValues";
 import Chart from "../components/Dashboard/Chart";
+import LegendAndSwitch from "../components/Dashboard/LegendAndSwitch";
 const DashBoard = () => {
 
     //run a sychronous function to get the data
@@ -10,6 +11,10 @@ const DashBoard = () => {
     const [country, setCountry] = useState("India");
     const selectCountry = (country) => {
         setCountry(country);
+    }
+
+    const setViewMode = (mode) => {
+        setViewPeriod(mode);
     }
     const [currency, setCurrency] = useState("INR");
     const [symbol, setSymbol] = useState("₹");
@@ -25,9 +30,10 @@ const DashBoard = () => {
 
     return (
         <div>
-            <TopSection />
+            <TopSection  selectCountry={selectCountry}/>
             <AmountBar amountInUsd={1000} currency={currency} />
-            <Chart  viewPeriod={viewperiod}, currency={currency}, symbol={symbol}, conversionRate={conversionRate} />
+            <LegendAndSwitch  setViewMode={setViewMode}/>
+            <Chart  viewPeriod={viewperiod} currency={currency} symbol={symbol}  conversionRate={conversionRate} />
         </div>
     );
 }

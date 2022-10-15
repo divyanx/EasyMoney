@@ -28,6 +28,7 @@ html {
   --border-colors : #ddddde;
 
   --label-primary: #1f232e;
+  --grid-color: #efefef;
 }
 
 [data-theme="dark"] {
@@ -35,6 +36,8 @@ html {
   --base-primary: #1f232e;
 
   --label-primary: #ffffff;
+  --grid-color: #3a3a3f;
+  --base-quaternary: #2f333d;
 
 
 }

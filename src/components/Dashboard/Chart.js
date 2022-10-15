@@ -5,10 +5,13 @@ import styles from "./Chart.module.css";
 import Bar from "./Bar";
 import rawData from "../../data/rawData";
 import currencyValues from "../../data/currecyValues";
-const Chart = ({viewPeriod, currency}) => {
+const types = {"Card" : "Card Payments", "UPI" : "EFTs", "Internation" : "International wires"}
+const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const Chart = ({viewPeriod, currency, symbol, conversionRate}) => {
 
 
-    const types = {"Card" : "Card Payments", "UPI" : "EFTs", "Internation" : "International wires"}
+
 
     // calculate montly spending for each type
     const [monthlySpending, setMonthlySpending] = useState({});
@@ -30,7 +33,7 @@ const Chart = ({viewPeriod, currency}) => {
             setMonthlySpending(monthlySpending);
             console.log("Montly = " , monthlySpending);
         }
-        , [rawData]);
+        , [monthlySpending]);
 
     const [dailySpndingInLastMonth, setDailySpndingInLastMonth] = useState({});
     useEffect(() => {
@@ -59,7 +62,7 @@ const Chart = ({viewPeriod, currency}) => {
             console.log("dailySpending", dailySpending);
 
         }
-        , [rawData]);
+        , []);
 
 
 
@@ -70,10 +73,9 @@ const Chart = ({viewPeriod, currency}) => {
 
     const numLines = 7;
 
-    const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const [total, setTotal] = useState(0);
+    const [totalYear, setTotalYear] = useState(0);
+    const [totalMonth, setTotalMonth] = useState(0);
 
-    const [symbol , setSymbol] = useState("$");
 
     useEffect(
         () => {
@@ -88,17 +90,19 @@ const Chart = ({viewPeriod, currency}) => {
                     }
                 }
                 console.log("max = ", max);
-                setTotal(max);
+                setTotalYear(max);
             }
             else if (viewPeriod === "month" || viewPeriod === "week"){
                 let max = 0;
                 for (let i = 1; i <= 31; i++){
-                    const sum = dailySpndingInLastMonth[i] ? (+dailySpndingInLastMonth[i]["Card Payments"] + +dailySpndingInLastMonth[i]["EFTs"] + +dailySpndingInLastMonth[i]["International wires"]) : 0;
+                    const sum = dailySpndingInLastMonth[i] ? (+dailySpndingInLastMonth[i]["Card Payments"] + dailySpndingInLastMonth[i]["EFTs"] + dailySpndingInLastMonth[i]["International wires"]): 0;
                     if (sum > max){
+                        console.log("got max = ", sum, "for day = ", i);
                         max = sum;
                     }
                 }
-                setTotal(max);
+
+                setTotalMonth(max);
             }
         }
         , [viewPeriod, dailySpndingInLastMonth, monthlySpending]
@@ -107,26 +111,58 @@ const Chart = ({viewPeriod, currency}) => {
     const mappedBars= useMemo(() => {
         return (<div className={styles.bars_cont}>
             {
-                total !== 0 && viewPeriod === "year" && Months.map((month, index) => {
+                totalYear !== 0 && viewPeriod === "year" && Months.map((month, index) => {
                     // console.log("month = ", month);
                     // console.log([myData[month]["International wires"],myData[month]["Card Payments"], myData[month]["EFTs"]])
 
                     return (
                         <Bar
-                            values={[+monthlySpending[month]["International wires"], +monthlySpending[month]["Card Payments"], +monthlySpending[month]["EFTs"]]}
-                            totalHeightVal={total} label={month.substring(0, 3)}
+                            values={[+monthlySpending[month]["International wires"]*conversionRate, +monthlySpending[month]["Card Payments"]*conversionRate, +monthlySpending[month]["EFTs"]*conversionRate]}
+                            totalHeightVal={totalYear*conversionRate} label={month.substring(0, 3)}
                             id={index}
+                            symbol={symbol}
                         />
                     )
                 })
             }
             {
-                total === 0 && <div>There is no data for this period</div>
+                totalMonth !== 0 && viewPeriod === "month" && Object.keys(dailySpndingInLastMonth).map((day, index) => {
+                        return (
+                            <Bar
+                                values={[+dailySpndingInLastMonth[day]["International wires"]*conversionRate, +dailySpndingInLastMonth[day]["Card Payments"]*conversionRate , +dailySpndingInLastMonth[day]["EFTs"]*conversionRate ]}
+                                totalHeightVal={totalMonth*conversionRate} label={day}
+                                id={index}
+                                symbol={symbol}
+                                type="thinner"
+                            />
+                        )
+                    }
+                )
             }
+            {
+                totalMonth !== 0 && viewPeriod === "week" && Object.keys(dailySpndingInLastMonth).filter((day) => day <= 7).map((day, index) => {
+                        return (
+                            <Bar
+                                values={[+dailySpndingInLastMonth[day]["International wires"]*conversionRate, +dailySpndingInLastMonth[day]["Card Payments"]*conversionRate , +dailySpndingInLastMonth[day]["EFTs"]*conversionRate ]}
+                                totalHeightVal={totalMonth*conversionRate} label={days[day - 1]}
+                                id={index}
+                                symbol={symbol}
+                                type="thicker"
+                            />
+                        )
+                    }
+                )
+
+                }
+
+
+
+
+
         </div>)
-    }, [total, viewPeriod, monthlySpending]);
+    }, [totalYear, totalMonth, viewPeriod, monthlySpending, conversionRate, dailySpndingInLastMonth, symbol]);
 
-
+    console.log("total = ", totalYear, totalMonth);
     return (
         <div className={styles.chart_area}>
             <div className={styles.chart_background}>

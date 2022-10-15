@@ -33,7 +33,7 @@
     align-items: center;
     gap: 0.4rem;
     background-color: transparent;
-    padding: 0.2rem 0.4rem;
+    padding: 0.4rem 0.6rem;
     border : 0.8px solid var(--border-colors);
     border-radius: var(--common-radious);
     color : var(--label-primary);
@@ -47,4 +47,32 @@
     border-radius: 50%;
     object-fit: cover;
 
+}
+
+.countryList {
+    background-color: var(--base-primary);
+    width: 15rem;
+    height: auto;
+    max-height: 100rem;
+    z-index: 1003;
+/*    allow scrool*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+.countryItem{
+    background-color: var(--base-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    border : 0.8px solid var(--grid-color);
+    color : var(--label-primary);
+}
+
+.countryName{
+    display: inline-block;
 }
