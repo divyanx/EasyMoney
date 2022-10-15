@@ -3,13 +3,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    gap: -3rem;
     z-index: 101;
     height: 100%;
 }
 
 .bar_item {
-    width : 4rem;
+    width : 3rem;
     z-index : 102;
     border-top-left-radius: 0.8rem;
     border-top-right-radius: 0.8rem;
@@ -26,4 +25,13 @@
     font-weight: 300;
     padding-top: 0.4rem;
     margin-bottom: 2.8rem;
+}
+
+.data {
+    font-size: 1.8rem;
+    background-color: var(--base-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 1.6rem;
+    border : 0.8px solid var(--border-colors);
+    color : var(--label-primary);
 }
