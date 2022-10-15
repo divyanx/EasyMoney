@@ -1,5 +1,5 @@
 import styles from "./Page.module.css";
-import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import DashBoard from "./DashBoard";
 import PageNotAvailable from "./PageNotAvailable";
 const Page = () => {

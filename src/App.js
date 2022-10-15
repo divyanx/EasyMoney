@@ -1,5 +1,5 @@
 import useLocalStorage from "use-local-storage";
-import {BrowserRouter, Routes, Route, Redirect, Navigate} from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import Home from "./pages/Home";
 import './App.css';
 
