@@ -27,3 +27,16 @@
         padding: 1rem 1rem;
     }
 }
+
+.notaval {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    color: var(--label-primary);
+    font-weight: 500;
+}

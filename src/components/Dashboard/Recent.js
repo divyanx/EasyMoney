@@ -2,7 +2,9 @@ import styles from "./Recent.module.css";
 import {CalendarBlank} from "phosphor-react";
 import {useEffect, useState} from "react";
 import rawData  from "../../data/rawData";
+import ErrorModal from "../Modals/ErrorModal";
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
 const merchantLogos = {
     "Amazon" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
     "Netflix" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png",
@@ -26,7 +28,7 @@ const modesImg = {
 }
 const Recent = ({symbol, conversionRate}) => {
     const [mode, setMode] = useState("all");
-    const [data, setData] = useState(rawData);
+    const [data, ] = useState(rawData);
     const buttonClickHandler = (mode) => {
         setMode(mode);
     }
@@ -76,12 +78,15 @@ const Recent = ({symbol, conversionRate}) => {
         setRecentAll(sortedAll);
     }, [transfers, cards, data]);
 
+    const [showErrorModal, setShowErrorModal] = useState(false);
 
     return (
-        <div className={styles.recent}>
+        <>
+            {showErrorModal && <ErrorModal showModal={showErrorModal} setShowModal={setShowErrorModal} h={"Functionality not available yet!"} p={"The filter by date feature is not yet available, please come back later"}/>}
+            <div className={styles.recent}>
             <div className={styles.topBar}>
                 <h3>Recent transactions</h3>
-                <button className={styles.date_pick}><CalendarBlank size={16}/> <span>Select date</span> </button>
+                <button className={styles.date_pick} onClick={()=>{setShowErrorModal(true)}}><CalendarBlank size={16}/> <span>Select date</span> </button>
             </div>
 
             <div className={styles.switchcont}>
@@ -164,10 +169,10 @@ const Recent = ({symbol, conversionRate}) => {
                                 </tr>
                             ) : (
                                 <tr key={index}>
-                                    <td className={styles.merchcont}><img src={modesImg[item.sender]} className={styles.logo} />{item.sender}</td>
+                                    <td className={styles.merchcont}><img src={modesImg[item.sender]} className={styles.logo}  alt={"card"}/>{item.sender}</td>
                                     <td className={styles.credit}>{`+ ${symbol}${amt}`}</td>
                                     <td>{formatDate(item.datetime)}</td>
-                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.sender]}/> {item.sender}</td>
+                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.sender]} alt={"card"}/> {item.sender}</td>
                                 </tr>
                             )
                         )
@@ -180,6 +185,7 @@ const Recent = ({symbol, conversionRate}) => {
             </div>
 
         </div>
+        </>
     );
 }
 

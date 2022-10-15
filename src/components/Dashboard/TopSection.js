@@ -8,9 +8,9 @@ import SendMoneyModal from "../Modals/SendMoneyModal";
 const TopSection = ({selectCountry}) => {
     const [country, setCountry] = useState("India");
     const [countryCode, setCountryCode] = useState("IN");
-    const [currency, setCurrency] = useState("INR");
-    const [currencyValue, setCurrencyValue] = useState(74.24);
-    const [currencySymbol, setCurrencySymbol] = useState("₹");
+    const [, setCurrency] = useState("INR");
+    const [, setCurrencyValue] = useState(74.24);
+
     useEffect(() => {
     //    get country code currency value and set it to the state
         const countryData = currencyValues.find((item) => item.country === country);

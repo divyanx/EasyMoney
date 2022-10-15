@@ -1,4 +1,3 @@
-import Button from "../Button";
 import styles from "./AddMoneyModal.module.css";
 import {X, Plus} from "phosphor-react";
 const AddMoneyModal = ({showModal, setShowModal}) => {

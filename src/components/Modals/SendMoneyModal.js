@@ -1,6 +1,5 @@
-import Button from "../Button";
 import styles from "./AddMoneyModal.module.css";
-import {X, Plus, ArrowRight} from "phosphor-react";
+import {X, ArrowRight} from "phosphor-react";
 const SendMoneyModal = ({showModal, setShowModal}) => {
     return (
         <>

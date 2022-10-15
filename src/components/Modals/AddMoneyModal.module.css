@@ -90,3 +90,11 @@ input::placeholder {
 .submit:hover {
     background-color: var(--accent-secondary);
 }
+
+.headcent{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--label-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}

@@ -4,7 +4,6 @@ import {useEffect, useMemo, useState} from "react";
 import styles from "./Chart.module.css";
 import Bar from "./Bar";
 import rawData from "../../data/rawData";
-import currencyValues from "../../data/currecyValues";
 const types = {"Card" : "Card Payments", "UPI" : "EFTs", "Internation" : "International wires"}
 const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

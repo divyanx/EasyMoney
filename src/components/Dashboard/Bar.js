@@ -18,8 +18,8 @@ const dataDiv = (val, x, y, symbol) => {
 }
 const Bar = ({values, totalHeightVal, label, id, symbol, type}) => {
     const colors = [ "var(--accent-quaternary)", "var(--accent-tertiary)", "var(--accent-secondary)"]
-    const [vals, setVals] = useState(values);
-    const [totalHeight, setTotalHeight] = useState(totalHeightVal);
+    const [vals, ] = useState(values);
+    const [totalHeight,] = useState(totalHeightVal);
     const [heights, setHeights] = useState([]);
     useEffect(() => {
         //    get country code currency value and set it to the state
