@@ -12,3 +12,10 @@
     color: var(--label-primary);
 
 }
+
+@media screen and (max-width: 530px) {
+    .amount_bar {
+        justify-content: center;
+    }
+
+}

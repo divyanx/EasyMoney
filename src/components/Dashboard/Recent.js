@@ -107,17 +107,17 @@ const Recent = ({symbol, conversionRate}) => {
                         return (
                             item.type === "debit" ? (
                                 <tr key={index}>
-                                    <td className={styles.merchcont}><img src={merchantLogos[item.merchant]} className={styles.logo} />{item.merchant}</td>
+                                    <td className={styles.merchcont}><img src={merchantLogos[item.merchant]} className={styles.logo} alt={"logo"}/>{item.merchant}</td>
                                     <td className={styles.debit}>{`- ${symbol}${amt}`}</td>
                                     <td>{formatDate(item.datetime)}</td>
-                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.exactMode.split(" ")[0]]}/><div className={styles.cardDet}><span>{item.exactMode}</span><span>Expiry 06/2024</span></div></td>
+                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.exactMode.split(" ")[0]]}alt={"logo"}/><div className={styles.cardDet}><span>{item.exactMode}</span><span>Expiry 06/2024</span></div></td>
                                 </tr>
                             ) : (
                                 <tr key={index}>
-                                    <td className={styles.merchcont}><img src={modesImg[item.sender]} className={styles.logo} />{item.sender}</td>
+                                    <td className={styles.merchcont}><img src={modesImg[item.sender]} className={styles.logo} alt={"logo"}/>{item.sender}</td>
                                     <td className={styles.credit}>{`+ ${symbol}${amt}`}</td>
                                     <td>{formatDate(item.datetime)}</td>
-                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.sender]}/> {item.sender}</td>
+                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.sender]} alt={"logo"}/> {item.sender}</td>
 
                                 </tr>
                             )
@@ -133,18 +133,18 @@ const Recent = ({symbol, conversionRate}) => {
                         return (
                         item.type === "debit" ? (
                             <tr key={index}>
-                                <td className={styles.merchcont}><img src={merchantLogos[item.merchant]} className={styles.logo} />{item.merchant}</td>
+                                <td className={styles.merchcont}><img src={merchantLogos[item.merchant]} className={styles.logo} alt={"logo"}/>{item.merchant}</td>
                                 <td className={styles.debit}>{`- ${symbol}${amt}`}</td>
                                 <td>{formatDate(item.datetime)}</td>
-                                <td className={styles.mode}><img className={styles.card} src={modesImg[item.exactMode.split(" ")[0]]}/><div className={styles.cardDet}><span>{item.exactMode}</span><span>Expiry 06/2024</span></div></td>
+                                <td className={styles.mode}><img className={styles.card} src={modesImg[item.exactMode.split(" ")[0]]}alt={"logo"}/><div className={styles.cardDet}><span>{item.exactMode}</span><span>Expiry 06/2024</span></div></td>
 
                             </tr>
                         ) : (
                             <tr key={index}>
-                                <td className={styles.merchcont}><img src={modesImg[item.sender]} className={styles.logo} />{item.sender}</td>
+                                <td className={styles.merchcont}><img src={modesImg[item.sender]} className={styles.logo} alt={"logo"}/>{item.sender}</td>
                                 <td className={styles.credit}>{`+ ${symbol}${amt}`}</td>
                                 <td>{formatDate(item.datetime)}</td>
-                                <td className={styles.mode}><img className={styles.card} src={modesImg[item.sender]}/> {item.sender}</td>
+                                <td className={styles.mode}><img className={styles.card} src={modesImg[item.sender]}alt={"logo"}/> {item.sender}</td>
                             </tr>
                         )
                     )})}
@@ -157,10 +157,10 @@ const Recent = ({symbol, conversionRate}) => {
                         return(
                             item.type === "debit" ? (
                                 <tr key={index}>
-                                    <td className={styles.merchcont}><img src={merchantLogos[item.merchant]} className={styles.logo} />{item.merchant}</td>
+                                    <td className={styles.merchcont}><img src={merchantLogos[item.merchant]} className={styles.logo} alt={"logo"}/>{item.merchant}</td>
                                     <td className={styles.debit}>{`- ${symbol}${amt}`}</td>
                                     <td>{formatDate(item.datetime)}</td>
-                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.exactMode.split(" ")[0]]}/><div className={styles.cardDet}><span>{item.exactMode}</span><span>Expiry 06/2024</span></div></td>
+                                    <td className={styles.mode}><img className={styles.card} src={modesImg[item.exactMode.split(" ")[0]]}alt={"logo"}/><div className={styles.cardDet}><span>{item.exactMode}</span><span>Expiry 06/2024</span></div></td>
                                 </tr>
                             ) : (
                                 <tr key={index}>

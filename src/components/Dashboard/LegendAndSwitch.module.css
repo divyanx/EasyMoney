@@ -95,3 +95,35 @@
 .activebtn{
     background-color:  var(--base-quaternary)
 }
+
+@media screen and (max-width: 768px) {
+    .legend_switch{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .legendcont{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        gap: 0.5rem;
+        justify-content: space-around;
+    }
+    .legendcont h3{
+        font-size: 1rem;
+    }
+
+    .legend_item {
+        gap: 0.5rem;
+    }
+    .legend_item div{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .legend_item span{
+        font-size: 1rem;
+    }
+
+}

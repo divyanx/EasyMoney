@@ -53,7 +53,7 @@ const TopSection = ({selectCountry}) => {
                 <h2>Account Balance</h2>
                 <button className={styles.cont_pick} onClick={(e) => toggleDropdown(e)}><FunnelSimple size={14} weight="thin" /> <img
                     className={styles.flag}
-                    alt="United States"
+                    alt="flag"
                     src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`}/>
                 </button>
             </div>

@@ -5,6 +5,7 @@ import currencyValues from "../data/currecyValues";
 import Chart from "../components/Dashboard/Chart";
 import LegendAndSwitch from "../components/Dashboard/LegendAndSwitch";
 import Recent from "../components/Dashboard/Recent";
+import styles from "./DashBoard.module.css";
 const DashBoard = () => {
 
     //run a sychronous function to get the data
@@ -30,7 +31,7 @@ const DashBoard = () => {
         , [country]);
 
     return (
-        <div>
+        <div className={styles.dashBoard}>
             <TopSection  selectCountry={selectCountry}/>
             <AmountBar amountInUsd={1000} currency={currency} />
             <LegendAndSwitch  setViewMode={setViewMode}/>

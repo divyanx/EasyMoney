@@ -85,3 +85,18 @@
     display: inline-block;
 
 }
+
+
+
+@media screen and (max-width: 530px) {
+    .top_section{
+        flex-direction: column;
+        gap: 2rem;
+        padding-top:0;
+    }
+    .top_section_left h2{
+        font-size: 2rem;
+    }
+
+}
+

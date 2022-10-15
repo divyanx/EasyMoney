@@ -119,19 +119,20 @@
     .bar{
         display: flex;
         flex-direction: row;
-        height : auto;
         width: 100%;
         padding : 1rem 2rem;
         justify-content: space-around;
+        align-items: center;
         border-right: none;
         border-bottom: 1px solid var(--base-secondary);
+        height: auto;
 
     }
     .navs {
         padding-left: 8rem;
         display: flex;
         flex-direction: row;
-        flex-grow: 5;
+        flex-grow: 4;
         align-items: center;
         justify-content: flex-start;
         height: auto;
@@ -173,5 +174,42 @@
         padding-left: 0rem;
         gap : 0rem;
     }
+    .bar {
+        padding : 1rem 1rem;
+    }
 }
 
+@media (max-width: 460px) {
+    .navs {
+
+        flex-direction: column;
+        width : 100%;
+        position : fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+        background-color: rgba(0, 0, 0, 0.89);
+        align-items: flex-start;
+        gap : 1rem;
+        padding: 3rem 3rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .activeNav {
+        width : 100%;
+        background-color: var(--base-secondary);
+        color: #fff;
+        border-radius: var(--common-radious);
+    }
+
+    .bar {
+        padding: 1rem 1rem;
+        justify-content: space-between;
+    }
+}
+
+.drawer {
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+}

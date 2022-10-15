@@ -117,7 +117,7 @@ const Chart = ({viewPeriod, currency, symbol, conversionRate}) => {
 
                     return (
                         <Bar
-                            values={[+monthlySpending[month]["International wires"]*conversionRate, +monthlySpending[month]["Card Payments"]*conversionRate, +monthlySpending[month]["EFTs"]*conversionRate]}
+                            values={monthlySpending[month]? ([+monthlySpending[month]["International wires"]*conversionRate, +monthlySpending[month]["Card Payments"]*conversionRate, +monthlySpending[month]["EFTs"]*conversionRate]) : [0,0,0]}
                             totalHeightVal={totalYear*conversionRate} label={month.substring(0, 3)}
                             id={index}
                             symbol={symbol}
@@ -129,7 +129,7 @@ const Chart = ({viewPeriod, currency, symbol, conversionRate}) => {
                 totalMonth !== 0 && viewPeriod === "month" && Object.keys(dailySpndingInLastMonth).map((day, index) => {
                         return (
                             <Bar
-                                values={[+dailySpndingInLastMonth[day]["International wires"]*conversionRate, +dailySpndingInLastMonth[day]["Card Payments"]*conversionRate , +dailySpndingInLastMonth[day]["EFTs"]*conversionRate ]}
+                                values={dailySpndingInLastMonth[day] ? ([+dailySpndingInLastMonth[day]["International wires"]*conversionRate, +dailySpndingInLastMonth[day]["Card Payments"]*conversionRate , +dailySpndingInLastMonth[day]["EFTs"]*conversionRate ]) : [0,0,0]}
                                 totalHeightVal={totalMonth*conversionRate} label={day}
                                 id={index}
                                 symbol={symbol}

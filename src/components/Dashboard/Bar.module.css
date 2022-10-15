@@ -14,7 +14,10 @@
     border-top-right-radius: 0.8rem;
     margin-bottom: -0.52rem;
 }
-
+.bar_item:hover{
+/*    scale a bit*/
+    border : 0.1rem solid var(--accent-primary);
+}
 .bar_item:nth-child(3) {
     padding-bottom: 1rem;
 }
@@ -34,4 +37,28 @@
     border-radius: 1.6rem;
     border : 0.8px solid var(--border-colors);
     color : var(--label-primary);
+}
+
+@media screen and (max-width: 768px) {
+
+    .label{
+        font-size : 1.2rem;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .bar_item {
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .label{
+        font-size : 1rem;
+        padding-top: 1rem;
+        margin-bottom: 2.3rem;
+    }
+
 }

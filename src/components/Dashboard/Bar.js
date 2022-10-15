@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import styles from "./Bar.module.css";
-const thickness = {"thinner": "15px", "thicker": "60px"}
-
+const maxThickness = {"thinner": "15px", "thicker": "60px"}
+const thickness = {"thinner": "2vw", "thicker": "8vw"}
 const dataDiv = (val, x, y, symbol) => {
     console.log("vals", val);
     var sval = val.toString();
@@ -55,7 +55,7 @@ const Bar = ({values, totalHeightVal, label, id, symbol, type}) => {
 
             {heights.map((height, index) => {
                 return <div className={styles.bar_item}
-                            style={{height: `${height}%`, backgroundColor: colors[index], width : type in thickness ? thickness[type] : "30px"}}
+                            style={{height: `${height}%`, backgroundColor: colors[index], maxWidth : type in thickness ? maxThickness[type] : "30px", width: type in thickness ? thickness[type] : "4vw"}}
                             key={index}
                             onMouseOver={(e) => handleMouseHover(e, vals[index])}
                             onMouseOut={(e) => handleMouseOut(e)}
