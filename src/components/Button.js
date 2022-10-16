@@ -1,10 +1,10 @@
 import styles from "./Button.module.css";
-const Button = ({ children, onClick, type }) => {
+
+const Button = ({children, onClick, type}) => {
     var style = styles.button;
     if (type === "primary") {
         style = styles.primary;
-    }
-    else if (type === "secondary") {
+    } else if (type === "secondary") {
         style = styles.secondary;
     }
     return (

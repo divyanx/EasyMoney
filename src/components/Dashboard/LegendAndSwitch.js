@@ -1,5 +1,6 @@
 import styles from "./LegendAndSwitch.module.css";
 import {useState} from "react";
+
 const LegendAndSwitch = ({setViewMode}) => {
     const [mode, setMode] = useState("year");
     const buttonClickHandler = (mode) => {
@@ -24,9 +25,15 @@ const LegendAndSwitch = ({setViewMode}) => {
                 </div>
             </div>
             <div className={styles.switchcont}>
-                <button className={`${styles.button1} ${mode==="year" ? styles.activebtn : ""}`} onClick={()=>buttonClickHandler("year")}>12 months</button>
-                <button className={`${styles.button2} ${mode==="month" ?  styles.activebtn : ""}`} onClick={()=>buttonClickHandler("month")}>30 days</button>
-                <button className={`${styles.button3} ${mode==="week" ?  styles.activebtn : ""}`} onClick={()=>buttonClickHandler("week")}>7 days</button>
+                <button className={`${styles.button1} ${mode === "year" ? styles.activebtn : ""}`}
+                        onClick={() => buttonClickHandler("year")}>12 months
+                </button>
+                <button className={`${styles.button2} ${mode === "month" ? styles.activebtn : ""}`}
+                        onClick={() => buttonClickHandler("month")}>30 days
+                </button>
+                <button className={`${styles.button3} ${mode === "week" ? styles.activebtn : ""}`}
+                        onClick={() => buttonClickHandler("week")}>7 days
+                </button>
             </div>
         </div>
     );

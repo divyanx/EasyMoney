@@ -1,5 +1,5 @@
-.home{
-    display : flex;
+.home {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 1000px) {
-    .home{
+    .home {
         flex-direction: column;
     }
 }

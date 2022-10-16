@@ -1,15 +1,15 @@
-.bar{
+.bar {
     background-color: var(--bar-background);
     color: #fff;
     padding: 10px;
-    height : 100vh;
+    height: 100vh;
     width: 20%;
     min-width: 20rem;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right : 1px solid var(--base-secondary);
+    border-right: 1px solid var(--base-secondary);
 }
 
 .navs {
@@ -24,7 +24,7 @@
 
 .navs a {
     text-decoration: none;
-    width : 90%;
+    width: 90%;
     font-size: 1.8rem;
     font-weight: bold;
     display: flex;
@@ -33,11 +33,12 @@
     gap: 1.8rem;
     padding: 0.4rem 1rem;
 }
+
 .inactiveNav {
     text-decoration: none;
     padding: 0.6rem 1rem;
     border-radius: var(--common-radious);
-    color : var(--base-tertiary);
+    color: var(--base-tertiary);
 
 
 }
@@ -51,7 +52,7 @@
 
 .settings {
     text-decoration: none;
-    width : 90%;
+    width: 90%;
     font-size: 1.8rem;
     font-weight: bold;
     display: flex;
@@ -62,7 +63,8 @@
     color: #fff;
     cursor: pointer;
 }
-.bottomsect{
+
+.bottomsect {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,6 +73,7 @@
     width: 100%;
     height: auto;
 }
+
 .switcherCont {
     display: inline-block;
     display: flex;
@@ -80,9 +83,8 @@
 }
 
 
-
 .user {
-    padding : 0.4rem 2rem;
+    padding: 0.4rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -94,7 +96,7 @@
     margin-top: 1rem;
 }
 
-.userimg  {
+.userimg {
     width: 4rem;
     height: 4rem;
     border-radius: 1000rem;
@@ -113,14 +115,15 @@
 
 
 @media (max-width: 1000px) {
-    .user{
+    .user {
         display: none;
     }
-    .bar{
+
+    .bar {
         display: flex;
         flex-direction: row;
         width: 100%;
-        padding : 1rem 2rem;
+        padding: 1rem 2rem;
         justify-content: space-around;
         align-items: center;
         border-right: none;
@@ -128,6 +131,7 @@
         height: auto;
 
     }
+
     .navs {
         padding-left: 8rem;
         display: flex;
@@ -139,10 +143,10 @@
         /*min*/
     }
 
-    .navs a{
+    .navs a {
         display: inline-block;
         width: auto;
-        color : #fff;
+        color: #fff;
         font-weight: lighter;
         border-radius: 1000rem;
         font-size: 1.4rem;
@@ -153,10 +157,11 @@
         display: none;
     }
 
-    .bottomsect{
-        display : inline-block;
+    .bottomsect {
+        display: inline-block;
         width: auto;
     }
+
     .switcherCont {
         display: none;
     }
@@ -172,10 +177,11 @@
 @media (max-width: 560px) {
     .navs {
         padding-left: 0rem;
-        gap : 0rem;
+        gap: 0rem;
     }
+
     .bar {
-        padding : 1rem 1rem;
+        padding: 1rem 1rem;
     }
 }
 
@@ -183,20 +189,21 @@
     .navs {
 
         flex-direction: column;
-        width : 100%;
-        position : fixed;
+        width: 100%;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 10001;
         background-color: rgba(0, 0, 0, 0.89);
         align-items: flex-start;
-        gap : 1rem;
+        gap: 1rem;
         padding: 3rem 3rem;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
     }
+
     .activeNav {
-        width : 100%;
+        width: 100%;
         background-color: var(--base-secondary);
         color: #fff;
         border-radius: var(--common-radious);

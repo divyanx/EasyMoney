@@ -1,4 +1,4 @@
-.bar{
+.bar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,22 +8,24 @@
 }
 
 .bar_item {
-    width : 3rem;
-    z-index : 102;
+    width: 3rem;
+    z-index: 102;
     border-top-left-radius: 0.8rem;
     border-top-right-radius: 0.8rem;
     margin-bottom: -0.52rem;
 }
-.bar_item:hover{
-/*    scale a bit*/
-    border : 0.1rem solid var(--accent-primary);
+
+.bar_item:hover {
+    /*    scale a bit*/
+    border: 0.1rem solid var(--accent-primary);
 }
+
 .bar_item:nth-child(3) {
     padding-bottom: 1rem;
 }
 
-.label{
-    font-size : 1.5rem;
+.label {
+    font-size: 1.5rem;
     color: var(--label-primary);
     font-weight: 300;
     padding-top: 1rem;
@@ -35,14 +37,14 @@
     background-color: var(--base-primary);
     padding: 0.5rem 1rem;
     border-radius: 1.6rem;
-    border : 0.8px solid var(--border-colors);
-    color : var(--label-primary);
+    border: 0.8px solid var(--border-colors);
+    color: var(--label-primary);
 }
 
 @media screen and (max-width: 768px) {
 
-    .label{
-        font-size : 1.2rem;
+    .label {
+        font-size: 1.2rem;
         padding-top: 1rem;
         margin-bottom: 2rem;
     }
@@ -55,8 +57,8 @@
 }
 
 @media screen and (max-width: 500px) {
-    .label{
-        font-size : 1rem;
+    .label {
+        font-size: 1rem;
         padding-top: 1rem;
         margin-bottom: 2.3rem;
     }

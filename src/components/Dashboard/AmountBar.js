@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import currencyValues from "../../data/currecyValues";
 import styles from "./AmountBar.module.css";
 
-const AmountBar = ({ amountInUsd, currency }) => {
+const AmountBar = ({amountInUsd, currency}) => {
     const [amount, setAmount] = useState(0);
     const [symbol, setSymbol] = useState("");
     useEffect(() => {
@@ -14,8 +14,8 @@ const AmountBar = ({ amountInUsd, currency }) => {
     }, [currency, amountInUsd]);
     return (
         <div className={styles.amount_bar}>
-        <p>{symbol} {amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-        <p>{currency}</p>
+            <p>{symbol} {amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+            <p>{currency}</p>
         </div>
     );
 }

@@ -1,22 +1,22 @@
-.legendCol1{
-    width:1rem;
-    height:1rem;
+.legendCol1 {
+    width: 1rem;
+    height: 1rem;
     border-radius: 100%;
     background-color: var(--accent-secondary);
 
 }
 
-.legendCol2{
-    width:1rem;
-    height:1rem;
+.legendCol2 {
+    width: 1rem;
+    height: 1rem;
     border-radius: 100%;
     background-color: var(--accent-tertiary);
 }
 
 
-.legendCol3{
-    width:1rem;
-    height:1rem;
+.legendCol3 {
+    width: 1rem;
+    height: 1rem;
     border-radius: 100%;
     background-color: var(--accent-quaternary);
 }
@@ -32,13 +32,13 @@
     justify-content: space-between;
 }
 
-.legendcont h3{
+.legendcont h3 {
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--label-primary);
 }
 
-.legend_item{
+.legend_item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -46,83 +46,86 @@
     gap: 0.6rem;
 }
 
-.legend_item span{
+.legend_item span {
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--label-primary);
 }
 
-.legend_switch{
-    margin-top:4rem;
+.legend_switch {
+    margin-top: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.switchcont{
+.switchcont {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.switchcont button{
+.switchcont button {
     padding: 0.8rem 1rem;
-    border : 0.8px solid var(--border-colors);
-    color : var(--label-primary);
+    border: 0.8px solid var(--border-colors);
+    color: var(--label-primary);
 }
 
-.button1{
+.button1 {
     background-color: transparent;
     border-top-left-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
     cursor: pointer;
 }
 
-.button3{
+.button3 {
     background-color: transparent;
     border-top-right-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     cursor: pointer;
 }
 
-.button2{
+.button2 {
     background-color: transparent;
     cursor: pointer;
 }
 
-.activebtn{
-    background-color:  var(--base-quaternary)
+.activebtn {
+    background-color: var(--base-quaternary)
 }
 
 @media screen and (max-width: 768px) {
-    .legend_switch{
+    .legend_switch {
         flex-direction: column;
         gap: 2rem;
     }
 }
 
 @media screen and (max-width: 530px) {
-    .legendcont{
+    .legendcont {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
         gap: 0.5rem;
         justify-content: space-around;
     }
-    .legendcont h3{
+
+    .legendcont h3 {
         font-size: 1rem;
     }
 
     .legend_item {
         gap: 0.5rem;
     }
-    .legend_item div{
+
+    .legend_item div {
         width: 0.8rem;
         height: 0.8rem;
     }
-    .legend_item span{
+
+    .legend_item span {
         font-size: 1rem;
     }
 

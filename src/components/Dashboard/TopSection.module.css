@@ -14,13 +14,14 @@
     gap: 1.6rem;
 }
 
-.top_section_left h2{
+.top_section_left h2 {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--label-primary);
     letter-spacing: -0.1rem;
 }
-.top_section_right{
+
+.top_section_right {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,14 +35,14 @@
     gap: 0.4rem;
     background-color: transparent;
     padding: 0.4rem 0.6rem;
-    border : 0.8px solid var(--border-colors);
+    border: 0.8px solid var(--border-colors);
     border-radius: var(--common-radious);
-    color : var(--label-primary);
+    color: var(--label-primary);
 }
 
 .flag {
-/*  convert 3:2 image to 1:1 by cropping
- */
+    /*  convert 3:2 image to 1:1 by cropping
+     */
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -55,46 +56,46 @@
     height: auto;
     max-height: 100rem;
     z-index: 1003;
-/*    allow scrool*/
+    /*    allow scrool*/
     overflow-y: scroll;
     overflow-x: hidden;
 
 
 }
 
-.countryItem{
+.countryItem {
     background-color: var(--base-primary);
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.4rem;
     padding: 0.8rem 1.2rem;
-    border : 0.8px solid var(--grid-color);
-    color : var(--label-primary);
+    border: 0.8px solid var(--grid-color);
+    color: var(--label-primary);
 
 }
 
 /*hover*/
-.countryItem:hover{
+.countryItem:hover {
     background-color: var(--base-quaternary);
     cursor: pointer;
 }
 
-.countryName{
+.countryName {
     font-size: 1.4rem;
     display: inline-block;
 
 }
 
 
-
 @media screen and (max-width: 530px) {
-    .top_section{
+    .top_section {
         flex-direction: column;
         gap: 2rem;
-        padding-top:0;
+        padding-top: 0;
     }
-    .top_section_left h2{
+
+    .top_section_left h2 {
         font-size: 2rem;
     }
 

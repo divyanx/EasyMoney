@@ -1,57 +1,58 @@
 html {
-  font-size: 62.5%;
-  /* 1 rem = 10px */
+    font-size: 62.5%;
+    /* 1 rem = 10px */
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
-  border: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  /* base */
-  --base-primary: #ffffff;
-  --base-secondary: #404040;
-  --base-tertiary: #919191;
-  --base-quaternary: #F0F0F0;
-  --accent-primary : #27A371;
-  --accent-secondary : #74e2a3;
-  --accent-tertiary : #ABF0C4;
-  --accent-quaternary : #d4f7d8;
+    /* base */
+    --base-primary: #ffffff;
+    --base-secondary: #404040;
+    --base-tertiary: #919191;
+    --base-quaternary: #F0F0F0;
+    --accent-primary: #27A371;
+    --accent-secondary: #74e2a3;
+    --accent-tertiary: #ABF0C4;
+    --accent-quaternary: #d4f7d8;
 
-/*  others*/
-  --bar-background: #000;
-  --common-radious: 0.4rem;
-  --border-colors : #ddddde;
+    /*  others*/
+    --bar-background: #000;
+    --common-radious: 0.4rem;
+    --border-colors: #ddddde;
 
-  --label-primary: #1f232e;
-  --grid-color: #efefef;
+    --label-primary: #1f232e;
+    --grid-color: #efefef;
 }
 
 [data-theme="dark"] {
-  /* base */
-  --base-primary: #1f232e;
+    /* base */
+    --base-primary: #1f232e;
 
-  --label-primary: #ffffff;
-  --grid-color: #3a3a3f;
-  --base-quaternary: #2f333d;
+    --label-primary: #ffffff;
+    --grid-color: #3a3a3f;
+    --base-quaternary: #2f333d;
 
 
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--base-primary);
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--base-primary);
 }
+
 body {
-  background-color: var(--base-primary);
+    background-color: var(--base-primary);
 }
 
 html {
-  background-color: var(--base-primary);
+    background-color: var(--base-primary);
 }

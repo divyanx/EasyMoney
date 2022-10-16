@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import styles from "./SideBar.module.css";
-import { Gauge, Money, Share, CreditCard, UserList, Gear, List } from "phosphor-react";
+import {CreditCard, Gauge, Gear, List, Money, Share, UserList} from "phosphor-react";
 import ThemeSwitcher from "./ThemeSwitcher";
-const SideBar = ({ switchTheme }) => {
+
+const SideBar = ({switchTheme}) => {
     const [matches, setMatches] = useState(
         window.matchMedia("(max-width: 460px)").matches
     )
     useEffect(() => {
         window
             .matchMedia("(max-width: 460px)")
-            .addEventListener('change', e => setMatches( e.matches ));
+            .addEventListener('change', e => setMatches(e.matches));
     }, []);
 
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -25,7 +26,7 @@ const SideBar = ({ switchTheme }) => {
         <nav className={styles.bar}>
             {(!matches || drawerOpen) &&
                 <div>
-                    { !matches && !drawerOpen &&
+                    {!matches && !drawerOpen &&
                         <div className={styles.user}>
                             <div className={styles.user_img}>
                                 <img className={styles.userimg}
@@ -39,46 +40,46 @@ const SideBar = ({ switchTheme }) => {
 
                         </div>
                     }
-                <ul className={styles.navs} onClick={closeDrawer}>
-                    <NavLink to="/dashboard" className={({isActive}) =>
-                        isActive ? styles.activeNav : styles.inactiveNav
-                    }>
-                        <Gauge size={24}/> Dashboard
-                    </NavLink>
+                    <ul className={styles.navs} onClick={closeDrawer}>
+                        <NavLink to="/dashboard" className={({isActive}) =>
+                            isActive ? styles.activeNav : styles.inactiveNav
+                        }>
+                            <Gauge size={24}/> Dashboard
+                        </NavLink>
 
-                    <NavLink to="/transactions" className={({isActive}) =>
-                        isActive ? styles.activeNav : styles.inactiveNav
-                    }>
-                        <Money size={24}/> Transactions
-                    </NavLink>
+                        <NavLink to="/transactions" className={({isActive}) =>
+                            isActive ? styles.activeNav : styles.inactiveNav
+                        }>
+                            <Money size={24}/> Transactions
+                        </NavLink>
 
-                    <NavLink to="/transfers" className={({isActive}) =>
-                        isActive ? styles.activeNav : styles.inactiveNav
-                    }>
-                        <Share size={24}/> Transfers
-                    </NavLink>
+                        <NavLink to="/transfers" className={({isActive}) =>
+                            isActive ? styles.activeNav : styles.inactiveNav
+                        }>
+                            <Share size={24}/> Transfers
+                        </NavLink>
 
-                    <NavLink to="/cards" className={({isActive}) =>
-                        isActive ? styles.activeNav : styles.inactiveNav
-                    }>
-                        <CreditCard size={24}/> Cards
-                    </NavLink>
+                        <NavLink to="/cards" className={({isActive}) =>
+                            isActive ? styles.activeNav : styles.inactiveNav
+                        }>
+                            <CreditCard size={24}/> Cards
+                        </NavLink>
 
-                    <NavLink to="/accounts" className={({isActive}) =>
-                        isActive ? styles.activeNav : styles.inactiveNav
-                    }>
-                        <UserList size={24}/> Accounts
-                    </NavLink>
-                </ul>
-            </div>
+                        <NavLink to="/accounts" className={({isActive}) =>
+                            isActive ? styles.activeNav : styles.inactiveNav
+                        }>
+                            <UserList size={24}/> Accounts
+                        </NavLink>
+                    </ul>
+                </div>
             }
-            {matches && !drawerOpen &&  <button className={styles.drawer} onClick={toggleDrawer}>
-                <List size={24} weight="bold" />
+            {matches && !drawerOpen && <button className={styles.drawer} onClick={toggleDrawer}>
+                <List size={24} weight="bold"/>
             </button>}
             <div className={styles.bottomsect}>
-                <button className={styles.settings} ><Gear size={24} weight="fill" /></button>
+                <button className={styles.settings}><Gear size={24} weight="fill"/></button>
                 <div className={styles.switcherCont}>
-                    <ThemeSwitcher switchTheme={switchTheme} />
+                    <ThemeSwitcher switchTheme={switchTheme}/>
                 </div>
             </div>
         </nav>

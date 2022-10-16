@@ -1,29 +1,29 @@
-.main_page{
+.main_page {
     background-color: var(--base-primary);
-    height : 100vh;
+    height: 100vh;
     flex-grow: 1;
-    padding : 3rem 4rem;
+    padding: 3rem 4rem;
 
 }
 
 
 @media (max-width: 1000px) {
-    .main_page{
+    .main_page {
         height: 95vh;
         display: block;
         width: 100%;
-        padding : 2rem 3rem;
+        padding: 2rem 3rem;
     }
 }
 
 @media (max-width: 800px) {
-    .main_page{
+    .main_page {
         padding: 1rem 3rem;
     }
 }
 
 @media (max-width: 500px) {
-    .main_page{
+    .main_page {
         padding: 1rem 1rem;
     }
 }
