@@ -81,10 +81,10 @@ const Recent = ({symbol, conversionRate}) => {
     const [showErrorModal, setShowErrorModal] = useState(false);
 
     return (
-        <>
-            {showErrorModal && <ErrorModal showModal={showErrorModal} setShowModal={setShowErrorModal} h={"Functionality not available yet!"} p={"The filter by date feature is not yet available, please come back later"}/>}
+
             <div className={styles.recent}>
-            <div className={styles.topBar}>
+                {showErrorModal && <ErrorModal showModal={showErrorModal} setShowModal={setShowErrorModal} h={"Functionality not available yet!"} p={"The filter by date feature is not yet available, please come back later"}/>}
+                <div className={styles.topBar}>
                 <h3>Recent transactions</h3>
                 <button className={styles.date_pick} onClick={()=>{setShowErrorModal(true)}}><CalendarBlank size={16}/> <span>Select date</span> </button>
             </div>
@@ -185,7 +185,7 @@ const Recent = ({symbol, conversionRate}) => {
             </div>
 
         </div>
-        </>
+
     );
 }
 
