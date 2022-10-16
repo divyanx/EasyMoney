@@ -38,6 +38,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    color : var(--label-primary);
 }
 
 .mainpara p {
