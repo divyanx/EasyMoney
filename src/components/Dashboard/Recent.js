@@ -26,6 +26,11 @@ const modesImg = {
     "Swift" : "https://s3.amazonaws.com/spoke-profiles-prod-assets/avatars/210x210h/327fbf4a5865577de94c8b94eab4648c5eba8e30.png",
     "NEFT" : "https://seeklogo.com/images/N/neft-logo-7222234315-seeklogo.com.gif",
 }
+
+function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+}
 const Recent = ({symbol, conversionRate}) => {
     const [mode, setMode] = useState("all");
     const [data, ] = useState(rawData);
@@ -80,9 +85,28 @@ const Recent = ({symbol, conversionRate}) => {
 
     const [showErrorModal, setShowErrorModal] = useState(false);
 
+    const convertVhToPx = (vh=50) => {
+        const oneVhInPx = window.innerHeight / 100;
+        return oneVhInPx * vh;
+    };
+
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
     return (
 
-            <div className={styles.recent}>
+            <div className={styles.recent} style={{height :windowSize.innerWidth < 500 ? `${windowSize.innerHeight - 465}px` : windowSize.innerWidth < 1000 ? `${windowSize.innerHeight - 560}px` : `${windowSize.innerHeight - 560}px`}} >
                 {showErrorModal && <ErrorModal showModal={showErrorModal} setShowModal={setShowErrorModal} h={"Functionality not available yet!"} p={"The filter by date feature is not yet available, please come back later"}/>}
                 <div className={styles.topBar}>
                 <h3>Recent transactions</h3>

@@ -6,6 +6,7 @@
     flex-grow: 0;
     display : flex;
     flex-direction: column;
+    justify-content: flex-start;
 
 }
 .topBar{
@@ -76,7 +77,6 @@
 
 .transactionTable{
 /*    cover remaining page*/
-    height: 32vh;
     width: 100%;
     overflow-y: scroll;
 }
@@ -201,14 +201,23 @@ tr td:nth-child(4){
 }
 @media (max-width: 1000px) {
     .transactionTable{
-        height: 25vh;
         overflow-y: scroll;
     }
 
     .mode {
         padding-left: 0!important;
     }
+
+    .recent {
+        position: absolute;
+        top: 55rem;
+        left: 0;
+        width: 95vw;
+        margin: 0 2.5vw;
+
+    }
 }
+
 
 @media (max-width: 800px) {
     .mode {
@@ -226,10 +235,7 @@ tr td:nth-child(4){
         padding: 1.4rem 0;
         margin: 0;
     }
-    .transactionTable{
-        height: 20vh;
-        overflow-y: scroll;
-    }
+
 
 
 }
@@ -237,7 +243,6 @@ tr td:nth-child(4){
 @media (max-width: 420px) {
 
     .transactionTable{
-        height: 19vh;
         overflow-y: scroll;
     }
     .switchcont{
@@ -250,6 +255,7 @@ tr td:nth-child(4){
 
     .recent{
         margin-top: 1rem;
+        top: 45rem;
     }
 
     .topBar{
